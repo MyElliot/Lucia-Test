@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My_Elliot: iGEM 网页编辑入门文档</title>
+    <meta name="keywords" content="iGEM,wiki,网页,编辑,入门">
+    <meta name="description" content="本文档主要涉及iGEM wiki的创建、编辑方法以及一些2021 XJTU-China wiki用到的插件/库的使用，希望能为后来的iGEMers提供帮助。">
+    <link rel="shortcut icon" href="/favicon.png" type="image/png">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/siteCounter.js"></script>
+    <!-- IE11 support -->
+    <script nomodule src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.6.0/polyfill.min.js"
+        crossorigin="anonymous"></script>
+    <script nomodule
+        src="https://polyfill.io/v3/polyfill.min.js?features=Object.assign%2CElement.prototype.append%2CNodeList.prototype.forEach%2CCustomEvent%2Csmoothscroll"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header id="header"></header>
+    <div id="top"></div>
+    <div class="spacer"></div>
+    <section class="typed"
+        style="background-image: url(/img/notes/2001/2001.jpg); background-size:cover;background-position:center;">
+        <span class="h1 typed-title"></span>
+    </section>
+
+
+
+
+    <main id="main">
+        <section class="container">
+            <div class="container-fluid blog Chinese blackFont">
+                <div class="row">
+                    <div class="row g-4">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+                                <li class="breadcrumb-item"><a href="/Manchester_United.html">notes</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">iGEM网页编辑入门文档</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <div class="row g-2">
+
+                        <div class="order-md-2 col-md-4">
+                            <aside class="position-sticky" style="top: 3.5rem;">
+                                <div class="p-4 mb-3 bg-light rounded">
+                                    <h4 class="fst-italic">About</h4>
+                                    <p class="mb-0">本文档主要涉及iGEM wiki的创建、编辑方法以及一些2021 XJTU-China
+                                        wiki用到的插件/库的使用，希望能为后来的iGEMers提供帮助。
+                                        本文主要于<time datetime="2021-06">2021年6月</time>~<time
+                                            datetime="2021-08">2021年8月</time>编写，
+                                        彼时我正初学html等语言，该文档作为笔记被保留了下来，因此文档中不免有个人稚嫩的表达与措辞，敬情谅解。
+                                    </p>
+                                </div>
+
+                                <div class="p-4">
+                                    <h4 class="fst-italic">Content</h4>
+                                    <ul class="blog-content">
+                                        <li class="content-item"><a href="#1">1. 前言</a></li>
+                                        <li class="content-item"><a href="#2">2. 网页新建</a></li>
+                                        <li class="content-item"><a href="#3">3. 网页编辑</a></li>
+                                        <li class="content-item"><a href="#4">4. Lottie动画</a></li>
+                                        <li class="content-item"><a href="#5">5. Bootstrap框架</a></li>
+
+                                    </ul>
+                                </div>
+                            </aside>
+                        </div>
+                        
+                        <div class="order-md-1 col-md-8 p-4">
+
+                            <h3 class="pb-4 mb-4 fst-italic border-bottom">
+                                Feburary 2022
+                            </h3>
+
+                            <article class="blog-post">
+                                <h1 class="blog-post-title">iGEM 网页编辑入门文档</h1>
+                                <p class="blog-post-meta"><time datetime="2022-02">Feb., 2022</time> by <span
+                                        class="font-gothic">My_Elliot</span></p>
+                                <section>
+                                    <h2 id="1">1. 前言</h2>
+                                    <p>iGEM的网页编辑基于MediaWiki运行，是一款开放的团队编辑系统，可供所有队伍成员在登录状态下对网页的源代码进行编辑，若非本队队员只可查看源代码。这种共享编辑的网站与维基（wiki）百科（encyclopedia）、百度百科等的运行方式类似，在网页编辑上具有开放、高效等优点，而这些特点正在现代在线办公软件中一点一点地被体现（如腾讯、金山文档，google
+                                        drive等）。本文档将基于编者对iGEM网页编辑系统的了解，就如何在iGEM中创建、编辑网页，以及一些常见问题进行解释。由于编者也是初次学习，对于本文档内术语使用不当以及解释错误的地方还望谅解。更多帮助信息请查阅<a
+                                            href="https://2021.igem.org/Resources/Wiki_Editing_Help">iGEM网页编辑文档</a>以及<a
+                                            href="https://www.mediawiki.org/wiki/Help:Contents">MediaWiki帮助页面</a>。</p>
+                                    <hr>
+                                </section>
+                                <section>
+                                    <h2 id="2">2. 网页新建</h2>
+                                    <h3 id="21">2.1 网址</h3>
+                                    <p>对于每一支iGEM团队，iGEM官方都会为他们分配一个网址，如对于2021年西安交大参赛团队XJTU-China来说，队伍网址是：<a
+                                            href="https://2021.igem.org/Team:XJTU-China">https://2021.igem.org/Team:XJTU-China</a>。而XJTU-China的所有网页都将在此网址以及此网址的下级维持，如项目描述页（Project
+                                        Description）将会在<a
+                                            href="https://2021.igem.org/Team:XJTU-China/Description">https://2021.igem.org/Team:XJTU-China/Description</a>中打开。
+                                        <br />
+                                        <strong>注意！为了方便评委检索网页，对于展示奖牌评定关键内容的网页，其网址必需使用固定的命名方式命名，命名详见iGEM奖牌评定标准。</strong>
+                                    </p>
+                                    <h3 id="22">2.2 创建新网页</h3>
+                                    <p>在iGEM中创建网页只需要一步，即在队伍网址的下级添加网页名称，若该网址不存在，系统将打开提示界面，队员点击"edit this
+                                        page"，即可打开网页编辑器开始编辑。</p>
+                                    <figure class="figure">
+                                        <img src="/img/notes/2001/1.png" alt="提示界面" title="提示界面"
+                                            class="figure-img img-fluid rounded">
+                                        <figcaption class="figure-caption">
+                                            提示界面
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="figure">
+                                        <img src="/img/notes/2001/2.png" alt="代码编辑框" title="代码编辑框"
+                                            class="figure-img img-fluid rounded">
+                                        <figcaption class="figure-caption">代码编辑框</figcaption>
+                                    </figure>
+
+                                    <p>打开代码编辑框后，将代码编入/复制入框内，点击Save Page或Show
+                                        Preview即可保存页面或预览。保存页面后，再次输入相应网址，即可打开已编辑的界面了。
+                                        注意！</p>
+                                    <ol>
+                                        <li>在新建网页时，若新建的网址不是在自己队伍网址的下级（如: <a
+                                                href="https://2021.igem.org/Description">https://2021.igem.org/Description</a>），系统也将显示空白提示界面，但是没有edit
+                                            this page选项</li>
+
+                                        <li>若网址正确，也没有edit this page选项，请检查是否登录了正确的年份、队伍的账号</li>
+                                    </ol>
+                                    <hr>
+                                </section>
+                                <section>
+                                    <h2 id="3">3. 网页编辑</h2>
+                                    <h3 id="31wikitools">3.1 Wiki Tools</h3>
+                                    <p>前面讨论过，网页编辑器可以由空白页提示界面的edit this page打开。那么，对于已有的界面怎么进入编辑器呢？</p>
+                                    <ol>
+                                        <li>登录账号</li>
+                                        <li>打开欲编辑的网址，如: <a
+                                                href="https://2021.igem.org/Team:XJTU-China">https://2021.igem.org/Team:XJTU-China</a>
+                                        </li>
+                                        <li>点击页面左上角的Wiki Tools，选择Edit，即可编辑该网页了</li>
+                                    </ol>
+                                    <figure class="figure"><img src="/img/notes/2001/3.png" alt="Wiki tools-edit 图片"
+                                            title="wiki tools->edit" class="figure-img img-fluid rounded">
+                                        <figcaption>Wiki Tools--Edit</figcaption>
+                                    </figure>
+                                    <h3 id="32">3.2 编辑器语言</h3>
+                                    <p>MediaWiki使用mardown语言进行编译，请参考<a
+                                            href="https://2021.igem.org/Resources/Wiki_Editing_Help">iGEM帮助文档</a>。但是，你也可以在编辑器中键入HTML,
+                                        CSS以及JavaScript语言以编辑你的网页，其使用方法与其它网页/文本编辑软件（如Dreamweaver、VS
+                                        Code）基本相同，但是你的所有html内容应该包含在<code>&lt;html>&lt;/html></code>标签内，因而你不必像在文档顶部注释
+                                        <code>&lt;!doctype html></code>。
+                                        当你想在同一张网页内同时使用html与MediaWiki的mardown时，<strong>请确保MediaWiki的mardown在html标签的外部</strong>，即：
+                                    </p>
+                                    <pre><code>''''' MediaWiki markdown '''''
+
+&lt;html&gt;
+	&lt;p&gt; &lt;b&gt; &lt;i&gt; Example text &lt;/i&gt; &lt;/b&gt; &lt;/p&gt;
+&lt;/html&gt;
+
+''''' MediaWiki markdown '''''
+                                        </code></pre>
+                                    <h3 id="33">3.3 模板</h3>
+                                    <h4 id="331">3.3.1 简介</h4>
+                                    <p>MediaWiki中的模板是一个非常宽泛的概念，它既可以是一个网页，也可以是一个样式表（.css）或者是js脚本文件（.js），但不论如何，它在体系中最终是以一个网页的形式出现，<strong>即模板的本质是一个网页，只不过它可以嵌入到其它的网页中</strong>。如XJTU-China以模板的形式导入了bootstrap.css样式表文件，你可以检索<a
+                                            href="https://2021.igem.org/Template:XJTU-China/bootstrap">https://2021.igem.org/Template:XJTU-China/bootstrap</a>查看该模板所成的网页。
+                                    </p>
+                                    <figure><img src="/img/notes/2001/4.png" alt="bootstrap.css" title="bootstrap.css"
+                                            class="figure-img img-fluid rounded">
+                                        <figcaption>
+                                            bootstrap.css
+                                        </figcaption>
+                                    </figure>
+                                    <p><strong>注意！由于.css文件只有样式代码，因此该网页无法显示任何实质的内容，但你可以通过WikiTool的View
+                                            Source按钮来查看源代码。</strong></p>
+                                    <h4 id="332">3.3.2 创建模板</h4>
+                                    <p>前面提到，iGEM为每一个队伍（Team）都分配了一个网址，如<a
+                                            href="https://2021.igem.org/Team:XJTU-China">https://2021.igem.org/Team:XJTU-China</a>，对于XJTU-China来说，所有的网页都应该在此网页或其子页面中保存。而模板（Template）的网址格式与队伍类似，XJTU-China的模板代码应该保存在<a
+                                            href="https://2021.igem.org/Template:XJTU-China">https://2021.igem.org/Template:XJTU-China</a>或者其子页面中，如上一节的bootstrap，其网址为<a
+                                            href="https://2021.igem.org/Template:XJTU-China/bootstrap">https://2021.igem.org/Template:XJTU-China/bootstrap</a>。
+                                        而创建模板的方式与创建网页的方式类似，只不过队员们应该在Template:XJTU-China（而不是Team:XJTU-China或Team:XJTU-China/Template:XJTU-China）之后新建网页。打开网址后将出现同样的空白提示界面以及edit
+                                        this page选项，点击后即可打开代码编辑器；当然，你也可以从已有网页上的wiki tools-edit按钮打开代码编辑器。</p>
+                                    <h4 id="333">3.3.3 编辑模板</h4>
+                                    <p>由于模板的本质是一个网页，因此在编辑模板代码时，要通过编辑网页的格式按照HTML语言的要求进行编辑，最基本地，需要标签<code>&lt;html&gt;</code>。如：
+                                    </p>
+                                    <pre><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Team:XJTU-China&lt;/title&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;meta name="keywords" content="iGEM,Xi'an Jiaotong University,XJTU-China,Tryptophan, Trp,Biosynthesis,E.coli"&gt;
+        &lt;meta name="description" content="Welcome to 2021 XJTU-China"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" /&gt;
+    &lt;/head&gt;
+                                        
+    &lt;body&gt;
+        &lt;div class="container"&gt; &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                    <p><strong>注意！模板网页中的内容，如:
+                                            <code>&lt;head&gt;</code>,<code>&lt;body&gt;</code>标签中的内容将会在被嵌入的网页中显示，这也是模板的一大特点，你可以批量化地通过嵌入模板在网页中插入一个组件/页面
+                                        </strong>。比如header与footer。</p>
+                                    <p>如果你不希望插入任何组件，而只是想引入.css/.js/.json等文件，你可以使用以下格式：</p>
+                                    <pre><code>&lt;html&gt;
+&lt;style&gt;
+        &lt;!--复制你的样式表内容--&gt;
+&lt;/style&gt;
+
+&lt;script&gt;
+        &lt;!--复制你的JavaScript内容--&gt;
+&lt;/script&gt;
+&lt;/html&gt;</code></pre>
+                                    <p>也就是说，你只需要按照html引用<a
+                                            href="https://www.runoob.com/html/html-css.html">内部样式表</a>或者<a
+                                            href="https://www.w3school.com.cn/js/js_shiyong.asp">内部JS</a>的方法在模板文件中引入.css/.js/.json文件的内容即可。当模板嵌入另一个网页时，你所引用的样式或JS将会在新网页中被使用。<strong>这种引入方法，需要在代码前后加
+                                            <code>&lt;html&gt;&lt;/html&gt;</code>标签，但是嵌入网页时要在<code>&lt;html&gt;&lt;/html&gt;</code>标签之外</strong>。在“3.4
+                                        CSS/JavaScript引入”中还将具体介绍三种引入CSS/JavaScript文件的方法。
+                                    </p>
+
+                                    <h4 id="334">3.3.4 引用模板</h4>
+
+                                    <p>对于XJTU-China队伍来说，模板的存放位置是https://2021.igem.org/Template:XJTU-China/... ,
+                                        在别的网页代码中嵌入时，引用格式为</p>
+
+                                    <blockquote>
+                                        <p><strong>&#123;{XJTU-China/nav}}</strong> </p>
+
+                                        <p>当然&#123;{XJTU-China/nav}}本身也是一个模板文件，我们也可以将模板内容编辑到该页面上。举个例子，若我们想在<a
+                                                href="https://2021.igem.org/Team:XJTU-China">https://2021.igem.org/Team:XJTU-China</a>中引入导航栏的模板：<a
+                                                href="https://2021.igem.org/Template:XJTU-China/nav">https://2021.igem.org/Template:XJTU-China/nav</a>，可以在
+                                            <html>标签外插入&#123;{XJTU-China/nav}}，如下：
+                                        </p>
+                                    </blockquote>
+                                    <pre><code>&#123;{XJTU-China/nav}}
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;tittle&gt;Team:XJTU-China&lt;/tittle&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!--你的内容--&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                    <p>同样的方法也适用与.css/.js文件的引用。</p>
+
+                                    <h3 id="34cssjavascript">3.4 CSS/Javascript引入</h3>
+
+                                    <blockquote>
+                                        <p>iGEM的网站提供了三种引入CSS/JavaScript的方法，接下来将就此展开部分内容</p>
+
+                                        <h4 id="341">3.4.1 通过模板引入</h4>
+
+                                        <p>此法在前文中有所涉及，即利用MediaWiki的模板功能来进行引入。.css与.js文件的引入方式类似，现以.css文件引入为例：
+                                            首先，以“Template:Team Name/..”为格式创建一个网页，打开代码编辑器，输入所需要的代码，如：<a
+                                                href="https://2021.igem.org/Template:XJTU-China/css">https://2021.igem.org/Template:XJTU-China/css</a>:
+                                        </p>
+                                    </blockquote>
+                                    <pre><code>&lt;style&gt;
+.header_area {
+    padding: 40px 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    transition: background 0.4s, all 0.3s linear;
+}
+&lt;/style&gt;</code></pre>
+                                    <p>保存后，通过&#123;Team Name/File Name}}的格式，在需要引入文件的网页中加入引入该代码，如</p>
+                                    <pre><code>&#123;{XJTU-China/css}}
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;tittle&gt;Team:XJTU-China&lt;/tittle&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!--你的内容--&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+&#123;{XJTU-China/js}}&lt;!--这是另外一个模板，包含.js文件内容--&gt;
+                                    </code></pre>
+                                    <p>注意！由于html与MediaWiki使用的编辑语言并不同，因此以花括号{{}}的方式引用的样式表或js一定要在<code>&lt;html&gt;</code>标签的外部。
+                                        若想引用.js文件，只需在编写模板时将<code>&lt;style&gt;</code>换成<code>&lt;script&gt;</code>即可。
+                                    </p>
+
+                                    <h4 id="342linkscript">3.4.2 通过<code>&lt;link&gt;</code>,
+                                        <code>&lt;script&gt;</code>引入（通过模板内部引入）
+                                    </h4>
+
+                                    <p>上例中的样式表与js文件必需在html外部引入，若想在html内部引用的话，需要用html标签<code>&lt;link&gt;</code>或<code>&lt;script&gt;</code>，以html的方式引入相应文档，引用格式为：
+                                    </p>
+                                    <pre><code>&lt;html&gt;
+
+    &lt;link rel="stylesheet" type="text/css" href="https://2021.igem.org/wiki/index.php?title=Template:TeamName/CSS&amp;action=raw&amp;ctype=text/css" /&gt;
+    
+    &lt;script type="text/javascript" src="https://2021.igem.org/wiki/index.php?title=Template:TeamName/JS&amp;action=raw&amp;ctype=text/javascript"&gt;&lt;/script&gt;
+    
+&lt;/html&gt;</code></pre>
+                                    <p>其中只有<code>Template:TeamName/CSS</code>与<code>Template:TeamName/JS</code>需要根据具体文件名更改，链接其余部分应与例子相同。从命名方法可以看出，此时的样式表或JS同样是以模板的形式出现的，但是
+                                        <strong>注意！此时在编辑模板文件时，不要在代码中加入<code>&lt;style&gt;</code>或<code>&lt;script&gt;</code>标签</strong>，即：
+                                    </p>
+                                    <pre><code>&lt;!--不用&lt;style&gt; 和 &lt;/style&gt;包围css内容--&gt;
+.header_area {
+    padding: 40px 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    transition: background 0.4s, all 0.3s linear;
+}
+                                    </code></pre>
+                                    <h4 id="343">3.4.3 采用内部样式表</h4>
+
+                                    <p>还有一种在html内部使用css与js的方法，那就是采用内部样式表，其用法与html相同，如：</p>
+                                    <pre><code>&lt;html&gt;
+    &lt;style type="text/css"&gt;
+    /*Make text red and bold*/
+    .red_text {
+        color: #f42434;
+        font-weight:bold;
+    }
+    &lt;/style&gt;
+
+    &lt;script type="text/javascript"&gt;
+        $(document).ready(function() {
+        $("#alert").addClass("red_text");
+    });
+    &lt;/script&gt;
+    &lt;/html&gt;
+    </code></pre>
+                                    <h4 id="344">3.4.4 总结</h4>
+
+                                    <p>在三种方法中，有一种使用了内部样式表，两种用到了模板文件，而这两种方法一个是在html内部使用<code>&lt;link&gt;</code>或
+                                        <code>&lt;script&gt;</code>标签引入，另一个是在<code>&lt;html&gt;</code>外部用<code>{{ ...}}</code>句法进行引用。
+                                        这几种方法各有所优缺点，在具体使用时会造成不便。
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">通过模板外部引入</th>
+                                                    <th scope="col">通过<code>&lt;link&gt;&lt;script&gt;</code>引入</th>
+                                                    <th scope="col">内部样式表</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">优点</th>
+                                                    <td>语法简单，简洁明了；代码复用方便；</td>
+                                                    <td>语法类似html，可读性较强；代码复用方便</td>
+                                                    <td>在代码中可以直接阅读，内部样式表不会产生额外请求</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">缺点</th>
+                                                    <td>当引入JS时，不能使用and操作符(&amp;)，否则浏览器将自动转化为&amp;amp;，导致程序运行出错，对于CSS没有此要求
+                                                    </td>
+                                                    <td>需要保证引用的服务器链接对应的内容不变，对后期维护要求较高；语句较长，书写不简洁;对于<code>&lt;html&gt;&lt;/html&gt;</code>外的内容不起作用,有bug（好像？）
+                                                    </td>
+                                                    <td>语句长，书写不简洁；不可模块化处理</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <h3 id="35">3.5 其他文件的上传和使用</h3>
+
+                                    <h4 id="351">3.5.1 文件上传</h4>
+
+                                    <p>iGEM
+                                        wiki中的文件一律保存在内部服务器中，以防外部服务器在wiki冻结后对wiki内容进行修改。因此，对于其它文件的引用与使用之前，都需要向iGEM的服务器中上传相应的文件。iGEM支持上传的文件格式有：
+                                    </p>
+
+                                    <blockquote>
+                                        <p>png, gif, jpg, jpeg, pdf, ppt, txt, zip, mp3, mp4, webm, mov, swf, xls, xlsx,
+                                            docx, pptx, csv, m, ogg, gb, tif, tiff, fcs, otf, eot, ttf, woff, svg.</p>
+                                    </blockquote>
+
+                                    <p>除此之外的文件格式都需要转码才能上传，否则iGEM将阻止用户的上传操作。2021年文件上传网站为：<a
+                                            href="https://2021.igem.org/Special:Upload">https://2021.igem.org/Special:Upload</a>
+                                        注意！上传时要严格遵守文件命名格式，否则将无法正确显示缩略图或引用，命名格式如下:</p>
+
+                                    <p class="text-center">T--OFFICIAL team name--File_name</p>
+                                    <p>如XJTU-China上传的名为bg.jpg的图片，上传时文件应命为：</p>
+                                    <p class="text-center">T--XJTU-China--bg.jpg</p>
+
+                                    <h4 id="352">3.5.2 文件引用</h4>
+
+                                    <p>对于已在<a
+                                            href="https://2021.igem.org/Special:Upload">iGEM上传网站</a>中上传的文件，上传成功后将打开一张网页，以显示文件以及相关信息，如对于文件T--XJTU-China-bg.jpg，打开的网址为<a
+                                            href="https://2021.igem.org/File:T--XJTU-China--bg.jpg">https://2021.igem.org/File:T--XJTU-China--bg.jpg</a>。但是，在引用该文件时，使用的URL应该是<a
+                                            href="https://2021.igem.org/wiki/images/f/fd/T--XJTU-China--bg.jpg">https://2021.igem.org/wiki/images/f/fd/T--XJTU-China--bg.jpg</a>，这是由于上传成功界面并非文件储存地址，而上传成功界面只是将文件从储存地址中引用了而已。至于如何获取后者，只需要在上传成功页面
+                                        右键点击文件-->复制文件链接 即可。</p>
+                                    <figure><img src="/img/notes/2001/5.png" alt="复制文件链接" title="复制文件链接"
+                                            class="figure-img img-fluid rounded">
+                                        <figcaption>复制文件链接</figcaption>
+                                    </figure>
+
+                                    <p><strong>再次注意！由于iGEM要求用户只能使用服务器内部文件，因此在代码中所有引用的文件的路径都应该来源于上述操作。</strong></p>
+
+                                    <h3 id="36abigailsisonfromigemheadquarter">3.6 文件与网页的删除（斜粗体字语自Abigail Sison from
+                                        iGEM Headquarter）</h3>
+
+                                    <p><strong><em>对已上传的文件，iGEM暂时未推出删除功能，但是你可以使用上传一个新版本的文件，并使用同一个文件名来在网页中进行引用，以此对文件进行修改</em></strong>。（*事实上iGEM的upload界面上有deletion
+                                        log，但似乎只能由iGEM Headquarter staff 完成）
+                                        <strong><em>对于已创建的网页，你只需要清空所有代码，网页将自动恢复到默认界面</em></strong>。（**但我对这个方法的有效性表示怀疑，这样只能清空页面，可并不像打开空白页那样提示空白并显示edit
+                                        this page选项）
+                                        总之，iGEM没有对各支队伍文件与网页数目进行限定，不小心创建的网页清空代码即可，不需要过多处理，文件则只能同名替换，不能删除。
+                                    </p>
+
+                                    <hr>
+                                </section>
+                                <section>
+                                    <h2 id="4">4. Lottie动画</h2>
+
+                                    <h3 id="41">4.1 什么是lottie？</h3>
+
+                                    <p>说起来你可能不信，<a
+                                            href="https://airbnb.design/lottie/">lottie</a>是由以旅行房屋租赁社区出名的——爱彼迎(Airbnb,
+                                        AirBed and
+                                        Breakfast)公司所推出的一款轻量而高质的移动应用动画效果框架。通俗点说，就是你可以在Android、iOS、web等平台通过lottie框架来播放一些精美设计的动画而不损失其画质。Lottie的一经推出就惹得了全球代码工作者的喜爱，因为lottie动画的制作主要是在Adobe
+                                        After
+                                        Effect上进行的，而通过Bodymovin插件，AE文件可以导出为以文本格式存档的.json文件，在大大降低动画文件体积的同时也加快了网页/程序响应的速度。再有，由于lottie动画在网页或程序中可以以svg格式进行渲染，这让动画的分辨率得到了保证。如今，lottie已经被运用到了许多<a
+                                            href="https://lottiefiles.com/showcase">国内外知名的软件程序</a>当中，包括多邻国(Duolingo)，Spotify，Grab，谷歌，Netflix，Tik
+                                        Tok等。因此，XJTU-China在2021年的iGEM比赛中大部分的动画文件都将以lottie框架进行渲染播放。</p>
+
+                                    <h3 id="42">4.2
+                                        如何使用lottie框架？（可参考<a
+                                            href="https://github.com/airbnb/lottie-web">Github:aribnb/lottie-web</a>）
+                                    </h3>
+
+                                    <p>Lottie支持Android、iOS、React
+                                        Native以及Windows等平台，这里由于篇幅原因只介绍如何把lottie运用到iGEM网页中的方法，其余平台的开发方式可参阅考<a
+                                            href="https://github.com/airbnb">爱彼迎Github仓库</a>或<a
+                                            href="https://github.com/LottieFiles">LottieFiles GitHub仓库</a>介绍。</p>
+
+                                    <h4 id="421">4.2.1 通过Bodymovin导出AE动画</h4>
+
+                                    <p>Lottie强大之处体现在它可以通过After
+                                        Effect软件进行动画设计并通过Bodymovin插件导出成.json文件，从而插入网页中使用。因此，<strong>如果需要自己设计lottie动画，首先需要下载并安装AE，同时安装Bodymovin插件</strong>。插件安装方法有：
+                                    </p>
+
+                                    <ol>
+                                        <li>从<a href="http://aescripts.com/bodymovin/">aescripts aeplugins</a>或<a
+                                                href="https://creative.adobe.com/addons/products/12557">adobe
+                                                store</a>中下载（官推，付费）</li>
+
+                                        <li>从aescripts aeplugins中下载并安装<a
+                                                href="https://aescripts.com/learn/zxp-installer/">ZXPinstaller</a>，然后从Github的aribnb/lottie-web中循路径‘build/extension/’找到<a
+                                                href="https://github.com/airbnb/lottie-web/tree/master/build/extension">.zxp文件</a>，下载后用ZXPinstaller安装到AE中（官推，且免费0.0）
+                                        </li>
+
+                                        <li><a href="https://github.com/airbnb/lottie-web#option-4">... ...</a></li>
+                                    </ol>
+
+                                    <p>安装好后，打开AE软件，菜单栏选择“窗口>拓展>Bodymovin”即可调出插件。</p>
+
+                                    <figure> <img src="/img/notes/2001/6.png" alt="安装效果" title="安装效果"
+                                            class="figure-img img-fluid rounded">
+                                        <figcaption>安装效果</figcaption>
+                                    </figure>
+
+                                    <p><strong>注意！安装完成后，需要AE为Bodymovin开放权限插件才能正常使用：</strong></p>
+
+                                    <ul>
+                                        <li>Windows用户：点击"编辑>首选项>常规>脚本和表达式>勾选‘允许脚本写入文件和访问网络’ "</li>
+
+                                        <li>Mac用户：点击“Adobe After Effect>首选项>脚本和表达式>勾选‘允许脚本写入文件和访问网络’”</li>
+                                    </ul>
+
+                                    <p>对于自己设计动画的用户，在将项目文件设计完毕并保存好后，将窗口切换到Bodymovin界面，点击左上角按钮<img
+                                            src="/img/notes/2001/刷新.png" alt="刷新">刷新获得当前项目菜单的文件，选择一个合成之后，点击右侧的<img
+                                            src="/img/notes/2001/输出.png" alt="输出">图标，选择一个输出文件夹，最后点击<img
+                                            src="/img/notes/2001/渲染.png"
+                                            alt="渲染">，即可将当前的动画文件输出为.json格式文件供后续使用了。注意！由于lottie对AE的某些特效兼容并非特别完整，因此即使成功输出了动画，也有格式/码率等错误的可能，这时只能通过其它方式/框架进行输出渲染，或者修改动画文件。
+                                    </p>
+
+                                    <h4 id="422">4.2.2. 从外部向AE导入lottie动画</h4>
+
+                                    <p>事实上由于lottie的普及，在网络上已经形成了一些lottie动画的交流社区，使得设计师们可以不用从头设计所有的动画，而是基于别人的作品进行创作。而这些社区中最注著名的莫过于<a
+                                            href="https://lottiefiles.com/">LottieFiles</a>了。LottieFiles中储存着由全球各地天赋异禀的设计师们上传的各种lottie动画，并且以.json格式储存在LottieFiles的服务器中，除了付费项目外，也不乏许多优秀的免费的开源动画供所有LottieFiles社区的成员下载并且运用在自己的项目之中。
+                                    </p>
+
+                                    <figure> <img src="/img/notes/2001/7.png" alt="LottieFile社区" title="Lottie File 社区"
+                                            class="figure-img img-fluid rounded">
+                                        <figcaption>LottieFile社区</figcaption>
+                                    </figure>
+
+                                    <p>对于这些开源动画，创作者们一般都会放开编辑以及使用的权限，但同时也会保留所有权(即在使用时需要注明Attributions)，因此<strong>注意！在使用这些动画时请务必确认版权事项，以避免不必要的纠纷。同时iGEM也严禁使用未授权的一切产品，因此最好可以在网页发布之前与创作者邮件说明并确认</strong>。对于动画具体的许可证，可以参考动画页脚部分的说明。
+                                    </p>
+
+                                    <figure><img src="/img/notes/2001/8.png" alt="版权说明" title="版权说明"
+                                            class="figure-img img-fluid rounded">
+                                        <figcaption>版权说明</figcaption>
+                                    </figure>
+
+                                    <p>至于如何向AE中导入外部lottie动画，Bodymovin提供了在线和本地两种方式，而两种方式导入的方法都及其简单且基本相同，步骤如下：</p>
+
+                                    <ol>
+                                        <li>打开AE并切换到Bodymovin插件，点击上方的<img src="/img/notes/2001/导入lottie.png"
+                                                alt="导入Lottie动画">按钮，随后界面将切换到导入界面。</li>
+
+                                        <li>在导入界面中，选择<img src="/img/notes/2001/导入本地.png"
+                                                alt="导入本地文件">可以导入本地的.json文件(其实.txt文件应该也可以)；或者，你也可以键入网址以下载动画文件<img
+                                                src="/img/notes/2001/导入网络文件.png"
+                                                alt="导入网络动画">。对于LottieFiles用户来说，你可以在社区内每个动画的页面中找到<img
+                                                src="/img/notes/2001/lottieURL.png"
+                                                alt="LottieURL">标题，将其内容复制到Bodymovin中即可下载当前动画了。</li>
+                                    </ol>
+
+                                    <p>导入了动画文件之后，你将在左侧的项目菜单栏中看到导入的lottie动画，如果你懂得如何使用AE，那么只需要发挥你平常的功力，即可轻轻松松地修改编辑当前的动画了。最后再通过Bodymovin进行输出得到需要的.json文件。
+                                    </p>
+
+                                    <h4 id="423">4.2.3 将lottie动画插入代码中</h4>
+
+                                    <p>前面提到，lottie动画是以文本(.json)的形式引入到代码、借助lottie的框架渲染而出的矢量动画，这样的动画在相对较小的体积下也可以保持极高的分辨率，保证了代码的简洁以及网页的流畅。对于html网页的编写来说，只需要简单的几步就可以将lottie动画插入到网页中了，这里主要用到了HTML以及JavaScript的支持。
+                                    </p>
+                                    <p><strong>首先，需要将向代码文件中引入lottie包</strong>，这是为了向代码中加入能读取并渲染lottie动画文件的lottie框架。获取lottie包的方式有三种:
+                                    </p>
+
+                                    <ol>
+                                        <li>使用npm或bower软件，在命令提示符或powershell中输入
+                                            <pre><code># 使用npm 
+npm install lottie-web 
+# 使用bower
+bower install bodymovin
+</code></pre>
+                                        </li>
+
+                                        <li>从<a
+                                                href="https://cdnjs.com/libraries/bodymovin">cdnjs</a>下载，可选择lottie.min.js
+                                        </li>
+
+                                        <li>直接从Bodymovin中获取：打开Bodymovin插件，点击上方的"Get the
+                                            Player"，下载player或者gzipped版的player皆可。</li>
+                                    </ol>
+
+                                    <p>得到lottie包(一个.js文件)后，保存到代码文件夹相应位置，在html内正常使用
+                                        <script></script>进行引用即可将lottie包引入代码内部。
+                                    </p>
+                                    <pre><code>&lt;script src="js/lottie.js" type="text/javascript"&gt;&lt;/script&gt;</code></pre>
+                                    <p><strong>然后，使用JavaScript读取动画文件</strong>。你可以使用lottie.loadAnimation()方法来读取并设置动画基本参数，它的返回值是一个动画实例。
+                                    </p>
+                                    <pre><code>var animation = lottie.loadAnimation({
+    container: element,// 容纳动画的DOM对象。
+    renderer: 'svg',//渲染方式，有'svg'/'canvas'/'html'三种，默认svg即可
+    loop: true,//循环播放，可true/false/number
+    autoplay: true,//自动播放，可true/false
+    path: 'data.json'// 动画文件路径，在iGEM的系统中尤其要注意此参数，这在接下来会讲到
+    animationData: 'data'//如果不写path，也可以通过直接输入动画文本来读取动画；此条参数与path二选一。
+});</code></pre>
+                                    <p>如此，便建立了一个基本的lottie动画实例animation。以下是对lottie动画实例拥有的方法的基本解释，你可以凭此对你的动画进行播放、暂停等操作。仅涉及与iGEM网页编写需要的基础内容，更多信息请参考<a
+                                            href="https://github.com/airbnb/lottie-web#html">lottie-web库</a>：
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">方法头</th>
+                                                    <th scope="col">参数解释</th>
+                                                    <th scope="col">作用</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">play()</th>
+                                                    <td></td>
+                                                    <td>播放动画</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">stop()</th>
+                                                    <td></td>
+                                                    <td>停止播放</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">pause()</th>
+                                                    <td></td>
+                                                    <td>暂停播放</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">setSpeed(speed)</th>
+                                                    <td>● speed:播放速度，相对值，以值为1作标准速度</td>
+                                                    <td>调整播放速度</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">goToAndStop(value, isFrame)</th>
+                                                    <td>● value:数值，指示跳转的位置<br> ●
+                                                        isFrame:bool值，isFrame=true时，value表示帧数；否则表示时间(秒)</td>
+                                                    <td>将动画设置到某一秒或帧并停止播放</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">goToAndPlay(value, isFrame)</th>
+                                                    <td>● value:数值，指示跳转的位置<br> ●
+                                                        isFrame:bool值，isFrame=true时，value表示帧数；否则表示时间(秒)</td>
+                                                    <td>将动画设置到某一秒或帧并停止播放</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">setDirection(direction)</th>
+                                                    <td>● direction: 取值为1或-1，分别表示正向和反向</td>
+                                                    <td>设置动画播放方向</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">playSegments(segments, forceFlag)</th>
+                                                    <td>●
+                                                        segments：帧数段，用[,]设置，可以一次设置多个帧数段，如playSegments([1,5],[6,13],[7,14],true)<br>●
+                                                        forceFlag：布尔值，指示是否立即执行，forceFlag默认为false，即等待当前动画停止后再播放segments的内容
+                                                    </td>
+                                                    <td>播放动画片段</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">setSubframe(useSubFrame)</th>
+                                                    <td>●
+                                                        useSubFrame：布尔值，指示是否在基于原本AE动画上进行插值以提高帧率。useSubFrame=false时不进行插值处理；默认值为true
+                                                    </td>
+                                                    <td>是否在各帧之间插值</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">destroy()</th>
+                                                    <td></td>
+                                                    <td>销毁动画</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">getDuration(inFrames)</th>
+                                                    <td>● inFrames:布尔值，指示返回值是帧数还是时间(秒)</td>
+                                                    <td>返回动画长度</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <h4 id="424igemwikilottie">4.2.4 iGEM wiki中使用lottie</h4>
+
+                                    <p>iGEM
+                                        网页时基于MediaWiki运行的。虽然iGEM对导入.css与.js文件提供了三个方法，但是由于lottie使用的是.json文件作为储存动画信息的载体，因此iGEM网页使用lottie就遇到了一个极大的问题，即：如何将lottie动画导入到网页中？
+                                    </p>
+
+                                    <p>一个可能的方法是修改链接地址。我们知道使用<code>&lt;link&gt;&lt;script&gt;</code>引用时，链接格式为:</p>
+                                    <pre><code>https://2021.igem.org/wiki/index.php?title=Template:TeamName/FileName&action=raw&ctype=Text_Format</code></pre>
+                                    <p>可以看到如果我们将.json文件当做特殊的.js文件，在Text_Format上使用text/js或者text/json也许可以引入.json文件。但是失败了。
+                                        另一个可能的方法是通过文件上传系统，将.json文件类似于图片与字体等进行引用。可是iGEM的文件上传不支持.json文件。
+                                        而如今使用的方法，也是通过文件上传系统，不过上传文件的格式为.txt。即，将.json文件内容保存为.txt字符串，在代码中引用.txt文件，即可导入lottie动画文件了。这也许是因为.json的本质也是一个文本文档。
+                                        如：</p>
+                                    <pre><code>animData[i] = {
+    container: viewBtn[i], // the dom element that will contain the animation
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'https://2021.igem.org/wiki/images/1/14/T--XJTU-China--viewBtn.txt' // the path to the animation json</code></pre>
+                                    <hr>
+                                </section>
+                                <section>
+                                    <h2 id="5">5. bootstrap框架</h2>
+
+                                    <p>Unfinished...
+                                        详见官方帮助文档：<a href="https://v5.bootcss.com/">https://v5.bootcss.com/</a></p>
+                                </section>
+                            </article>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <div class="topBtn"><a href="#top"><span class="bi bi-arrow-up-circle-fill"></span></a></div>
+    <footer id="footer"></footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="/js/codeReuse.js"></script>
+
+    <!-- Customized js -->
+    <script>
+        $(document).ready(function () {
+            var options = {
+                strings: ['Things and tricks on iGEM Wiki'],
+                typeSpeed: 40,
+                showCursor: false,
+            };
+
+            var typed = new Typed('.typed-title', options);
+        });
+    </script>
+</body>
+
+</html>

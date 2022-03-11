@@ -1,0 +1,72 @@
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+
+        <a class="navbar-brand font-gothic" href="/index.html">My_Elliot</a>
+
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="bi bi-list" id="toggleBtn"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/cv.html" id="navbarScrollingDropdown" aria-expanded="false">
+                        CV
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                        aria-expanded="false">View</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/notes.html">Notes</a></li>
+                        <li><a class="dropdown-item" href="/Manchester_United.html">Manchester Utd.</a>
+                        </li>
+                        <li><a class="dropdown-item" href="/music.html">Music</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/weekly_highlight.html">Weekly
+                        Highlight</a>
+                </li>
+            </ul>
+
+
+            <!-- <form class="d-flex">
+                <input class="form-control me-2 te" type="text" value="" placeholder="Search" type="text"
+                    aria-label="Search">
+                <button class="btn btn-themeColor se" type="submit" onclick="go()">Search</button>
+            </form> -->
+        </div>
+    </div>
+</nav>
+
+<!-- <script>
+
+    function go() {
+        var text = document.querySelector('.te');
+        var search = document.querySelector('.se');
+        var urlText = "";
+        var site = "%20site:cnblogs.com/aeolian";
+        var baidu = "https://www.baidu.com/s?wd=";
+        var google = "https://www.google.com.hk/search?q=";
+        const searchContent = text.value;
+        var flag = 1;
+        if (flag == 1) {
+            urlText = baidu + searchContent + site;
+        }
+        else {
+            urlText = google + searchContent + site;
+        }
+        location.href = urlText;
+        window.open(urlText);
+    }
+</script> -->
