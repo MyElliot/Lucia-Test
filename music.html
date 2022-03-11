@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My_Elliot: Music</title>
+    <link rel="shortcut icon" href="/favicon.png" type="image/png">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/siteCounter.js"></script>
+    <!-- IE11 support -->
+    <script nomodule src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.6.0/polyfill.min.js"
+        crossorigin="anonymous"></script>
+    <script nomodule
+        src="https://polyfill.io/v3/polyfill.min.js?features=Object.assign%2CElement.prototype.append%2CNodeList.prototype.forEach%2CCustomEvent%2Csmoothscroll"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header id="header"></header>
+    <div id="top"></div>
+    <div class="spacer"></div>
+    <section class="typed"
+        style="background-image: url(/img/music-bg.jpg); background-size:cover;background-position:center;">
+        <span class="h1 typed-title font-LXGW"></span>
+    </section>
+
+
+
+    <main>
+        <div class="container blackFont">
+
+            <div class="row g-4 mt-5">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Music</li>
+                    </ol>
+                </nav>
+            </div>
+
+            <div class="row my-5">
+                <div class="list-group list-group-flush border-bottom scrollarea">
+                    <a href="/views/music/3001.html" class="list-group-item list-group-item-action py-3 lh-tight"
+                        aria-current="true">
+                        <div class="row">
+                            <div class="col-2">
+                                <h1 class="order">1.</h1>
+                            </div>
+                            <div class="col-10">
+
+                                <div class="d-flex w-100 align-items-center justify-content-between title">
+                                    <strong class="mb-1">任我行</strong>
+                                    <small><time datetime="2022-01-27">January 29, 2022</time></small>
+                                </div>
+                                <div class="col-10 mb-1 small about">
+                                    陈奕迅的嗓音有着非凡的魔力，人们总说只有他才能真挚地演绎出情歌的情。我最爱的陈奕迅作品《任我行》却非情歌...
+                                </div>
+
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="list-group list-group-flush border-bottom scrollarea">
+                    <a href="/views/music/3002.html" class="list-group-item list-group-item-action py-3 lh-tight"
+                        aria-current="true">
+                        <div class="row">
+                            <div class="col-2">
+                                <h1 class="order">2.</h1>
+                            </div>
+                            <div class="col-10">
+
+                                <div class="d-flex w-100 align-items-center justify-content-between title">
+                                    <strong class="mb-1">青春常驻</strong>
+                                    <small><time datetime="2022-03-7">March 7, 2022</time></small>
+                                </div>
+                                <div class="col-10 mb-1 small about">
+                                    那么，就趁着刚刚二十出头的年纪，好好地去陪伴所爱吧。不要一味地催逼自己在所谓学术的道路上埋头苦修了，随时停下来欣赏芳芳和嘉嘉，去跟父母提他们“还未老”，总不会留下遗憾的。
+                                </div>
+
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="list-group list-group-flush border-bottom scrollarea">
+                    <a href="/views/music/3003.html" class="list-group-item list-group-item-action py-3 lh-tight"
+                        aria-current="true">
+                        <div class="row">
+                            <div class="col-2">
+                                <h1 class="order">3.</h1>
+                            </div>
+                            <div class="col-10">
+
+                                <div class="d-flex w-100 align-items-center justify-content-between title">
+                                    <strong class="mb-1">砂之器</strong>
+                                    <small><time datetime="2022-03-07">March 7, 2022</time></small>
+                                </div>
+                                <div class="col-10 mb-1 small about">
+                                    转自My_Elliot在2022年2月12日发狂写的一条朋友圈。这不是诗，因为他从活过来到现在从来没有了解过古诗新体诗的韵，一行一行写只不过出于奇怪的打字习惯罢了
+                                </div>
+
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+
+    <footer id="footer"></footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="/js/codeReuse.js"></script>
+
+    <!-- Customized js -->
+    <script>
+        $(document).ready(function () {
+            var options = {
+                strings: ['移风易俗，莫善于乐^500——^500孔子'],
+                typeSpeed: 300,
+                showCursor: false,
+            };
+
+            var typed = new Typed('.typed-title', options);
+        });
+    </script>
+</body>
+
+</html>
